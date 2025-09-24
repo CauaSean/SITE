@@ -43,4 +43,8 @@ app.post('/send-email', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => 
-  console.log('Servidor rodando na porta ${PORT}'));
+  console.log(`Servidor rodando na porta ${PORT}`));
+
+app.get('/', (req, res) => {
+  res.send('Servidor está ativo. Use POST /send-email para enviar e-mails.');
+});
