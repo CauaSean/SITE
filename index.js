@@ -36,7 +36,7 @@ app.post('/send-email', async (req, res) => {
     console.log('✅ Email enviado com sucesso:', info.response);
     res.status(200).send('Email enviado com sucesso!');
   } catch (error) {
-    console.error('❌ Erro ao enviar email:', error);
+    console.error('Erro ao enviar email:', error);
     res.status(500).send('Erro ao enviar email');
   }
 });
